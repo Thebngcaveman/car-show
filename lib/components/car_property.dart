@@ -12,13 +12,13 @@ class CarProperty extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Image.asset(
-            'assets/images/porsche.png',
-            fit: BoxFit.cover,
+            'assets/images/lamborghini.png',
+            fit: BoxFit.contain,
             height: 175,
             width: MediaQuery.of(context).size.width - 30.0,
           ),
           Text(
-            'PORSCHE',
+            'LAMBORGHINI',
             style: TextStyle(
               fontFamily: 'Montserrat',
               fontSize: 30.0,
@@ -26,7 +26,7 @@ class CarProperty extends StatelessWidget {
             ),
           ),
           Text(
-            '2019 - 911 CARRERA S',
+            '2019 - 911 AVENTADOR',
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 14.0,
