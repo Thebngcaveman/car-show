@@ -1,3 +1,4 @@
+import 'package:car_show/components/car_property.dart';
 import 'package:car_show/components/icon_property.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -31,115 +32,84 @@ class _HomePageState extends State<HomePage>
         ),
         backgroundColor: Colors.red,
       ),
-      body: ListView(
+      body: Container(
         padding: EdgeInsets.only(left: 15.0),
-        children: <Widget>[
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.only(top: 25),
-                child: Icon(
-                  Icons.camera_alt,
-                  color: Colors.orange,
-                  size: 35.0,
-                ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.only(top: 25),
+              child: Icon(
+                Icons.favorite_border,
+                color: Colors.orange,
+                size: 35.0,
               ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Text(
-                'Your Desired Car',
-                style: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 30,
-                  fontFamily: 'Montserrat',
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Image.asset(
-                'assets/images/porsche.png',
-                fit: BoxFit.cover,
-                height: 175,
-                width: MediaQuery.of(context).size.width - 30.0,
-              ),
-              Text(
-                'PORSCHE',
-                style: TextStyle(
-                  fontFamily: 'Montserrat',
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                '2019 - 911 CARRERA S',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14.0,
-                    fontFamily: 'Montserrat',
-                    color: Colors.grey[500]),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                height: 0.75,
-                width: MediaQuery.of(context).size.width - 30.0,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Text(
+              'Your Desired Car',
+              style: TextStyle(
                 color: Colors.grey,
+                fontSize: 52,
+                fontFamily: 'Montserrat',
               ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 15.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    IconProp(),
-                    IconProp(),
-                    IconProp(),
-                  ],
-                ),
-              ),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                height: 0.75,
-                width: MediaQuery.of(context).size.width - 30.0,
-                color: Colors.grey,
-              ),
-              SizedBox(
-                height: 10.0,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            CarProperty(),
+            SizedBox(
+              height: 20.0,
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 15.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  Icon(
-                    Icons.refresh,
-                    size: 35.0,
-                    color: Colors.grey,
-                  ),
-                  Text(
-                    'EXCHANGE YOUR VEHICLE',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 17.0,
-                      fontFamily: 'Montserrat',
-                    ),
-                  ),
-                  Icon(
-                    Icons.arrow_forward,
-                    size: 35.0,
-                    color: Colors.grey,
-                  )
+                  IconProp(icon: Icons.card_travel,desc: "19/24",),
+                  IconProp(icon: Icons.timer,desc: "3.2",),
+                  IconProp(icon: Icons.network_cell,desc: "443",),
                 ],
-              )
-            ],
-          ),
-        ],
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Container(
+              height: 0.75,
+              width: MediaQuery.of(context).size.width - 30.0,
+              color: Colors.grey,
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Icon(
+                  Icons.refresh,
+                  size: 35.0,
+                  color: Colors.grey,
+                ),
+                Text(
+                  'EXCHANGE YOUR VEHICLE',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 17.0,
+                    fontFamily: 'Montserrat',
+                  ),
+                ),
+                Icon(
+                  Icons.arrow_forward,
+                  size: 35.0,
+                  color: Colors.grey,
+                )
+              ],
+            )
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
