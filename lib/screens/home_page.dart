@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage>
         ),
         backgroundColor: Colors.red,
       ),
-      body: Container(
+      body: Container( //TODO make scrollable
         padding: EdgeInsets.only(left: 15.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage>
             SizedBox(
               height: 20.0,
             ),
-            CarProperty(),
+            CarProperty(),//TODO make car prop pass prop for multiple value
             SizedBox(
               height: 20.0,
             ),
